@@ -46,6 +46,10 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="reverse" title=""/>
+                                        <connections>
+                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="KeV-1X-9mt"/>
+                                            <action selector="touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYr-bg-eD2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11c-NH-PFf">
                                         <rect key="frame" x="140" y="0.0" width="70" height="70"/>
@@ -57,6 +61,8 @@
                                         <buttonConfiguration key="configuration" style="plain" image="pause" title=""/>
                                         <connections>
                                             <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="io8-cq-s1F"/>
+                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="z34-uv-ohj"/>
+                                            <action selector="touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xlj-eV-cv6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-Pj-Ky0">
@@ -67,6 +73,10 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="forward" title=""/>
+                                        <connections>
+                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="eVF-Xv-yL4"/>
+                                            <action selector="touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FK4-EH-2UW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
