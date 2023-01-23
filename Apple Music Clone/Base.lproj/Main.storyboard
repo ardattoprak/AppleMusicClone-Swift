@@ -54,7 +54,10 @@
                                             <constraint firstAttribute="height" constant="70" id="MR0-yb-UYO"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="play" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="pause" title=""/>
+                                        <connections>
+                                            <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="io8-cq-s1F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-Pj-Ky0">
                                         <rect key="frame" x="280" y="0.0" width="70" height="70"/>
@@ -95,7 +98,7 @@
                         <outlet property="forwardBackGroundView" destination="FI9-tT-j4c" id="XxI-0y-gea"/>
                         <outlet property="forwardButton" destination="mQe-Pj-Ky0" id="cuN-Se-qO0"/>
                         <outlet property="playBackGroundView" destination="NWR-6O-WJd" id="sTk-ZF-g4T"/>
-                        <outlet property="playButton" destination="11c-NH-PFf" id="FeZ-Wa-g2K"/>
+                        <outlet property="playPauseButton" destination="11c-NH-PFf" id="WfL-MP-6QG"/>
                         <outlet property="reverseBackGroundView" destination="A9s-67-Mqz" id="TtH-oV-P0s"/>
                         <outlet property="reverseButton" destination="5In-ps-Nks" id="IRA-OF-kgm"/>
                     </connections>
@@ -107,7 +110,7 @@
     </scenes>
     <resources>
         <image name="forward" width="60" height="60"/>
-        <image name="play" width="60" height="60"/>
+        <image name="pause" width="60" height="60"/>
         <image name="reverse" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

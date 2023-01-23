@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var forwardBackGroundView: UIView!
     
     @IBOutlet var reverseButton: UIButton!
-    @IBOutlet var playButton: UIButton!
+    @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var forwardButton: UIButton!
     
     // MARK: - Properties
@@ -25,14 +25,15 @@ class ViewController: UIViewController {
     var isPlaying: Bool = true {
         didSet {
             if isPlaying {
-                playButton.setImage(UIImage(named: "pause"), for: .normal)
+                playPauseButton.setImage(UIImage(named: "pause"), for: .normal)
             } else {
-                playButton.setImage(UIImage(named: "play"), for: .normal)
+                playPauseButton.setImage(UIImage(named: "play"), for: .normal)
             }
         }
     }
 
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +49,22 @@ class ViewController: UIViewController {
         forwardBackGroundView.clipsToBounds = true
         forwardBackGroundView.alpha = 0
     }
-
+    
+    // MARK: - Actions
+    @IBAction func playPauseButtonTapped(_ button: UIButton) {
+        if isPlaying {
+            UIView.animate(withDuration: 0.5) {
+                self.albumImageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.albumImageView.transform = .identity
+            }
+        }
+        
+        isPlaying.toggle()
+        // Trueysa false falsesa true yapar
+    }
 
 }
 
